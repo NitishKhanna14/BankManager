@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.css"
+        integrity="sha256-8BrtNNtStED9syS9F+xXeP815KGv6ELiCfJFQmGi1Bg=" crossorigin="anonymous">
+</head>
+
+<body>
+
+
+    <section class="section columns is-centered is-multiline">
+
+        <div class="column is-6">
+
+
+            <div 
+                class="box is-shadowless " 
+                style=
+                    "border-radius: 8px; 
+                     border-width: 2px; 
+                     border-color: gray;
+                     border-style: solid;
+                     "
+                >
+                <p class="title is-1 has-text-white has-background-dark" style="padding: 8px;">
+                    Delete Customer
+                </p>
+
+                <form action="#" method="post" id="form_customer">
+
+                    <div class="field">
+                        <div class="control ">
+                            <label class="label"> SSN ID</label>
+                            <input class="input " type="text" placeholder="SSN ID" required>
+                        </div>
+                    </div>
+
+
+                    <div class="field">
+                        <div class="control ">
+                            <label class="label">Customer SSN ID</label>
+                            <input class="input " type="text" placeholder="SSN ID" required>
+                        </div>
+                    </div>
+
+
+
+                    <div class="field">
+                        <div class="control ">
+                            <label class="label">Customer Name</label>
+                            <input class="input " type="text" placeholder="SSN Name" required>
+                        </div>
+                    </div>
+
+
+                    <div class="field">
+                        <div class="control ">
+                            <label class="label">Age</label>
+                            <input class="input " type="number" placeholder="Enter a number" min="18" required>
+                        </div>
+                    </div>
+
+
+                    <div class="field">
+                        <div class="control ">
+                            <label class="label"> Address</label>
+
+                            <textarea form="form_customer" class="textarea" placeholder="Enter your address here"
+                                rows="2" required></textarea>
+                        </div>
+                    </div>
+
+
+                    <div class="field is-grouped">
+                        <p class="control">
+                            <button type="submit" class="button is-danger">Confirm Delete</button>
+                        </p>
+                        <p class="control">
+                            <button type="reset" class="button ">Cancel</button>
+                        </p>
+                    </div>
+
+
+                </form>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</body>
+
+</html>
