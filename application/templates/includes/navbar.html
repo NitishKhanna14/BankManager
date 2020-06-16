@@ -1,0 +1,133 @@
+<section class=" has-background-black-bis">
+    <div class="container" style="padding: 16px;">
+        <a href="#" class="title is-2">
+            <span class="has-text-warning"> FedChoice </span>
+            <span class="has-text-white"> Bank </span>
+        </a>
+    </div>
+    <nav class="container navbar is-warning" role="navigation" aria-label="main navigation">
+
+
+        <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+
+        <div id="navMenu" class="navbar-menu ">
+            <a href="{{ url_for('func_main') }}" class="navbar-item has-background-warning">
+                Home
+            </a>
+
+
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a href="#" class="navbar-link has-background-warning">
+                    Customer Management
+                </a>
+
+
+                <div class="navbar-dropdown">
+                    <a href="#" class="navbar-item">itm1</a>
+                    <a href="#" class="navbar-item">item2</a>
+                    <a href="#" class="navbar-item">item3</a>
+
+                </div>
+            </div>
+
+
+
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a href="#" class="navbar-link has-background-warning">
+                    Account Management
+                </a>
+
+
+                <div class="navbar-dropdown">
+                    <a href="#" class="navbar-item">itm1</a>
+                    <a href="#" class="navbar-item">item2</a>
+                    <a href="#" class="navbar-item">item3</a>
+
+                </div>
+            </div>
+
+
+
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a href="#" class="navbar-link has-background-warning">
+                    Status Details
+                </a>
+
+                <div class="navbar-dropdown">
+                    <a href="#" class="navbar-item">itm1</a>
+                    <a href="#" class="navbar-item">item2</a>
+                    <a href="#" class="navbar-item">item3</a>
+                </div>
+            </div>
+
+
+
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a href="#" class="navbar-link has-background-warning">
+                    Account Operations
+                </a>
+
+                <div class="navbar-dropdown">
+                    <a href="#" class="navbar-item">itm1</a>
+                    <a href="#" class="navbar-item">item2</a>
+                    <a href="#" class="navbar-item">item3</a>
+                </div>
+
+            </div>
+
+            
+            {% if nav.login==True %}
+            <a href=" {{ url_for('func_main') }}" class="navbar-item has-background-warning">
+                <!-- todo : make a post request to func_main and handle the log user out action there -->
+                Logout
+            </a>
+            {% else %}
+            <a href="{{ url_for('func_login') }}" class="navbar-item has-background-warning has-text-danger">
+                <!-- todo load login via get request -->
+                Login
+            </a>
+            {% endif %}
+
+
+
+       
+
+
+
+        </div>
+    </nav>
+
+     <!-- for handling navbar -->
+     <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // Get all "navbar-burger" elements
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+            // Check if there are any navbar burgers
+            if ($navbarBurgers.length > 0) {
+
+                // Add a click event on each of them
+                $navbarBurgers.forEach(el => {
+                    el.addEventListener('click', () => {
+
+                        // Get the target from the "data-target" attribute
+                        const target = el.dataset.target;
+                        const $target = document.getElementById(target);
+
+                        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                        el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
+
+                    });
+                });
+            }
+
+        });
+    </script>
+
+</section>
