@@ -80,13 +80,13 @@
             </div>
 
             
-            {% if nav.login==True %}
-            <a href=" {{ url_for('func_main') }}" class="navbar-item has-background-warning">
+            {% if nav['login']!="" %}
+            <a href=" {{ url_for('func_login') }}" class="navbar-item has-background-warning has-text-danger">
                 <!-- todo : make a post request to func_main and handle the log user out action there -->
                 Logout
             </a>
             {% else %}
-            <a href="{{ url_for('func_login') }}" class="navbar-item has-background-warning has-text-danger">
+            <a href="{{ url_for('func_login') }}" class="navbar-item has-background-warning ">
                 <!-- todo load login via get request -->
                 Login
             </a>

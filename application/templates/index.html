@@ -3,18 +3,43 @@
 {% block content %}
 
 
-<section class="section container">
-    <h1 class="title is-1">
-        Welcome.
-    </h1>
-    <hr>
-    
-    <p>
-        Checkout the actions from top menu
-    </p>
-    <br><br><br><br><br>
 
-</section>
+{% if nav['login']!="" %}
+    <section class="section container">
+
+        <h1 class="title is-1">
+            Welcome.
+        </h1>
+
+        <hr>
+        
+        <p>
+            Checkout the actions from top menu
+        </p>
+        <br><br><br><br><br>
+
+    </section>
+        
+{% else %}
+
+    <section class="section container">
+        <h1 class="title is-1">
+            Welcome.
+        </h1>
+
+        <hr>
+        
+        <p>
+            Please Login for accessing other info
+        </p>
+        <br><br><br><br><br>
+
+    </section>
+    
+{% endif %} 
+
+
+
 
 
 {% endblock %}
