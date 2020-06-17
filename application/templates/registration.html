@@ -1,0 +1,81 @@
+
+{% extends "__bt__.html" %}
+
+
+{% block content %}
+
+
+<section class="section columns is-centered is-multiline">
+
+    <div class="column is-4">
+
+
+        <div class="box ">
+            <p class="title is-1 has-text-white has-background-dark" style="padding: 8px;">
+                Register 
+            </p>
+
+            <form action="#" method="post">
+
+                <div class="field">
+                    <div class="control ">
+                        <label class="label">Email</label>
+                        <input class="input " type="email" placeholder="Email" required>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <div class="control ">
+                        <label class="label">Username</label>
+                        <input class="input " type="text" placeholder="Username" required>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <div class="control ">
+                        <label class="label">Password</label>
+                        <input class="input " type="password" placeholder="Set a password" minlength="8" maxlength="16"
+                            required>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="control">
+                      <label class="label">City</label>
+                      <input class="input" type="text" id="city" placeholder="Enter the city"  required>
+                    </div>
+                </div>
+                <br>
+
+                <div>
+                    <label class="control">
+                        <input type="checkbox" class="checkbox" required="">
+
+                        <span>I Agree To The Terms & Conditions</span>
+                    </label>
+                </div>
+
+                <br>
+
+                <div class="field is-grouped">
+                    <p class="control">
+                        <button type="submit" class="button is-info">Submit</button>
+                    </p>
+                    <p class="control">
+                        <button type="reset" class="button is-light">Cancel</button>
+                    </p>
+                </div>
+
+
+            </form>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+{% endblock %}
