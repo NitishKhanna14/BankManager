@@ -24,3 +24,6 @@ def func_logout():
     nav_details['login']=""
     return redirect('/')
 
+@app.route('/registration')
+def func_register():
+    return render_template("registration.html",nav=nav_details)
