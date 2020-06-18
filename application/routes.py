@@ -27,3 +27,7 @@ def func_logout():
 @app.route('/registration')
 def func_register():
     return render_template("registration.html",nav=nav_details)
+
+@app.route('/create')
+def create_account():
+    return "<h1>Account Created</h1>"
