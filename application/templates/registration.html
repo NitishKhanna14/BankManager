@@ -5,6 +5,7 @@
 {% block content %}
 
 
+
 <section class="section columns is-centered is-multiline">
 
     <div class="column is-4">
@@ -12,39 +13,50 @@
 
         <div class="box ">
             <p class="title is-1 has-text-white has-background-dark" style="padding: 8px;">
-                Register 
+                Create Account
             </p>
 
             <form action="#" method="post">
 
                 <div class="field">
                     <div class="control ">
-                        <label class="label">Email</label>
-                        <input class="input " type="email" placeholder="Email" required>
+                        <label class="label">SSN ID</label>
+                        <input class="input " type="text" placeholder="Customer SSN ID" required>
                     </div>
                 </div>
 
                 <div class="field">
                     <div class="control ">
-                        <label class="label">Username</label>
-                        <input class="input " type="text" placeholder="Username" required>
+                        <label class="label">Name</label>
+                        <input class="input " type="text" placeholder="Customer Name" required>
                     </div>
                 </div>
 
                 <div class="field">
                     <div class="control ">
-                        <label class="label">Password</label>
-                        <input class="input " type="password" placeholder="Set a password" minlength="8" maxlength="16"
-                            required>
+                        <label class="label">Age</label>
+                        <input class="input " type="number" placeholder="Age" required>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="control">
-                      <label class="label">City</label>
-                      <input class="input" type="text" id="city" placeholder="Enter the city"  required>
+                      <label class="label">Address</label>
+                      <textarea id="address" name="address" rows="5" cols="65" placeholder="" required></textarea>
                     </div>
                 </div>
+                <br>
+                <div class="row">
+                    <p>
+                    <label><b>City </b> </label>
+                    <input type="text" placeholder="City" required>
+                    &nbsp; &nbsp;
+                    <label><b> State </b></label>
+                    <input type="text" placeholder="State" required>
+                    </p>
+                </div>
+
+
                 <br>
 
                 <div>
@@ -59,7 +71,8 @@
 
                 <div class="field is-grouped">
                     <p class="control">
-                        <button type="submit" class="button is-info">Submit</button>
+                        <button type="submit" id="myPopup" class="button is-info">
+                            <a href="{{ url_for('create_account') }}">Create</a></button>
                     </p>
                     <p class="control">
                         <button type="reset" class="button is-light">Cancel</button>
